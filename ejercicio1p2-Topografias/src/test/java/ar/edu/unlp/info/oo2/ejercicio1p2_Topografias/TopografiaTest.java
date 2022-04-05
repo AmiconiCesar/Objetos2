@@ -79,6 +79,9 @@ public class TopografiaTest {
     	 assertFalse(agua.equals(mixtaAgua));
     	 
     	 assertTrue(pantano1.equals(pantano2));
+    	 
+    	 mixtaE = new TopografiaMixta(agua,mixta2,tierra,pantano2);
+    	 assertFalse(mixtaE.equals(mixta1));
     			   		 
     	 
      }
