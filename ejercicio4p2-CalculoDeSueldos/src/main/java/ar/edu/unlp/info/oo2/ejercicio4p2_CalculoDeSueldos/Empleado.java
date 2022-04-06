@@ -7,17 +7,15 @@ public abstract class Empleado {
 	
 	abstract public int calcularAdicional();
 	
-	public double calcularDescuento(int basico, int adicional) {
-		return (basico * 13) / 100 + (adicional * 5) / 100;
+	public double calcularDescuento() {
+		return (this.calcularBasico() * 13) / 100 + (this.calcularAdicional() * 5) / 100;
 	}
 	
 	
 	// Template Method
 	public double calcularSueldo() {   
-		int basico, adicional;
-		basico = this.calcularBasico();
-		adicional = this.calcularAdicional();
-		return basico + adicional - this.calcularDescuento(basico, adicional);
+		
+		return this.calcularBasico() + this.calcularAdicional() - this.calcularDescuento();
 		
 	}
 

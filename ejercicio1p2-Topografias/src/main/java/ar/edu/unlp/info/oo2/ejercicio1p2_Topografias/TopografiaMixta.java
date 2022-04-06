@@ -5,19 +5,18 @@ import java.util.List;
 
 public class TopografiaMixta extends Topografia {
 	
-	  private List<Topografia> componentes = new ArrayList<>();
+	  private List<Topografia> componentes;
 	
 	  
-	  @SuppressWarnings("unchecked")
-	public TopografiaMixta(ArrayList<Topografia> componentes) {
+	  public TopografiaMixta(List<Topografia> componentes) {
 		  if (componentes.size()==4) {
-			    this.componentes = (List<Topografia>) componentes.clone();
+			    this.componentes = new ArrayList<>(componentes);
 		  	}
-	    }
+	   }
 	  
 	public TopografiaMixta(Topografia topografia1, Topografia topografia2, Topografia topografia3, 
 			Topografia topografia4) {
-		
+		    this.componentes = new ArrayList<Topografia>();
 			this.componentes.add(topografia1);
 			this.componentes.add(topografia2);
 			this.componentes.add(topografia3);

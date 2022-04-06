@@ -18,7 +18,7 @@ public class Prueba {
 		lista.add(tierra);
 		lista.add(agua);
 		
-		TopografiaMixta mixta= new TopografiaMixta((ArrayList<Topografia>) lista);
+		TopografiaMixta mixta= new TopografiaMixta(lista);
 		
 		
 		lista2.add(agua);
