@@ -7,17 +7,17 @@ import java.util.List;
 
 
 	
-public class Directorio extends Component{
+public class Directorio extends FileSystemComponent{
 
-	private List<Component> contenido;
+	private List<FileSystemComponent> contenido;
 	
 	
 	public Directorio(String nombre, LocalDate fecha) {
 		super(nombre, fecha, 32);
-		this.contenido = new ArrayList<Component>();
+		this.contenido = new ArrayList<FileSystemComponent>();
 	}
 
-	public void agregar(Component componente) {
+	public void agregar(FileSystemComponent componente) {
 		this.contenido.add(componente);
 		
 	}
